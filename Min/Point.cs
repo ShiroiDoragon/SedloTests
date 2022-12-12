@@ -8,6 +8,7 @@ namespace SedloTests
 {
     public class Point
     {
+        protected int pX, pY, pV;
         public Point (int coordx, int coordy, int value)
         {
             CoordX = coordx;
@@ -19,33 +20,33 @@ namespace SedloTests
         {
             get
             {
-                return this.CoordX;
+                return this.pX;
             }
             set
             {
-                this.CoordX = value;
+                this.pX = value;
             }
         }
         public int CoordY
         {
             get
             {
-                return this.CoordY;
+                return this.pY;
             }
             set
             {
-                this.CoordY = value;
+                this.pY = value;
             }
         }
         public int Value
         {
             get
             {
-                return this.Value;
+                return this.pV;
             }
             set
             {
-                this.Value = value;
+                this.pV = value;
             }
         }
 

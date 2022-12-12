@@ -29,9 +29,9 @@ namespace SedloTests
             var points = sedlo.SedloPoints;
             foreach (var p in points)
             {
-                Console.WriteLine(p.CoordX + " " + p.CoordY + " " + p.Value);
+                Console.Write(p.CoordX + " " + p.CoordY + " " + p.Value + "; ");
             }
-            testMethod();
+            //testMethod();
             Console.ReadLine();
         }
 

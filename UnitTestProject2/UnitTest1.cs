@@ -4,6 +4,8 @@ using SedloTests;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace UnitTestMin
 {
@@ -54,10 +56,11 @@ namespace UnitTestMin
             {
                 using (var sr = new StringReader("3\n1\n2\n3\n4\n5\n6\n7\n8\n9\n"))
                 {
-                    Console.SetIn(sr);
-                    Program.Main();
                     Console.SetOut(sw);
-                    Assert.AreEqual("0 2 3\n2 0 7", sw);
+                    Console.SetIn(sr);                   
+                    Program.Main();
+                    var result = sw.ToString().Trim().Split('\n').Last();
+                    Assert.AreEqual("0 2 3; 2 0 7;", result);
                 }
             }
         }
